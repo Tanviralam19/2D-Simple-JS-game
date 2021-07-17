@@ -1,0 +1,202 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(165, 101, 238, 0.918);
+}
+
+/* creating the play screen/section for the game */
+.game {
+  height: 78%;
+  width: 85%;
+  border: 4px solid red;
+  margin-top: 5%;
+  margin-left: 6%;
+  border-radius: 5px;
+  background-color: rgba(135, 145, 228, 0.74);
+}
+
+#ground {
+  height: 25px;
+  background-color: brown;
+  position: relative;
+  top: 30.5%;
+}
+
+/* CLOUDS  */
+
+/*  first cloud */
+#cloud {
+  height: 100px;
+  width: 280px;
+  margin: 5px;
+  margin-left: 44%;
+  background: #eceff1;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+  animation: shadow 15s alternate infinite;
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  20% {
+    box-shadow: 30px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+  40% {
+    box-shadow: 30px -40px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  60% {
+    box-shadow: -20px -40px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  80% {
+    box-shadow: -30px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  100% {
+    box-shadow: -30px 20px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+#cloud:after,
+#cloud:before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  background: inherit;
+  border-radius: inherit;
+}
+
+#cloud::after {
+  height: 100px;
+  width: 110px;
+  top: -70px;
+  left: -100px;
+}
+
+#cloud::before {
+  height: 130px;
+  width: 145px;
+  top: -70px;
+  left: 110px;
+}
+
+/* second cloud */
+#cloud_two {
+  height: 120px;
+  width: 320px;
+  margin-left: 68%;
+  margin-top: -5%;
+  background: #eceff1;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+  animation: shadow 15s alternate infinite;
+}
+
+#cloud_two:after,
+#cloud_two:before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  background: inherit;
+  border-radius: inherit;
+}
+
+#cloud_two::after {
+  height: 100px;
+  width: 110px;
+  top: -70px;
+  left: -100px;
+}
+#cloud_two::before {
+  height: 130px;
+  width: 160px;
+  top: -65px;
+  left: 120px;
+}
+/* end CLOUDS */
+
+/* SUN */
+#sun {
+  height: 130px;
+  width: 130px;
+  margin: 5px;
+  box-shadow: 0px 0px 10px 15px rgb(230, 230, 93);
+  background-color: yellow;
+  border-radius: 50%;
+  position: relative;
+  top: -40%;
+  animation: moving_sun 15s alternate infinite;
+}
+
+@keyframes moving_sun {
+  0% {
+    left: 5px;
+    visibility: visible;
+  }
+
+  100% {
+    left: 88%;
+  }
+}
+/* end SUN */
+
+/* CHARACTER */
+#character {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  position: relative; /* stay on the bottom of the platform */
+  top: 78%;
+  left: 10px;
+  border-radius: 55%;
+}
+
+.animate {
+  animation: jump 0.5s;
+}
+
+@keyframes jump {
+  0% {
+    top: 320px;
+  }
+
+  30% {
+    top: 220px;
+  }
+
+  70% {
+    top: 220px;
+  }
+
+  100% {
+    top: 320px;
+  }
+}
+/* end CHARACTER */
+
+#block {
+  height: 115px;
+  width: 25px;
+  background-color: rgb(12, 8, 8);
+  position: relative;
+  top: 8%;
+  left: 60%;
+  animation: block 6s linear infinite;
+}
+
+@keyframes block {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: 0px;
+  }
+}

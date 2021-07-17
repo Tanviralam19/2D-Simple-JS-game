@@ -1,0 +1,26 @@
+.box {
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 8%;
+  width: 600px;
+  height: 420px;
+  background-color: rgb(187, 187, 238);
+}
+
+.body {
+  height: 100px;
+  width: 100px;
+  background-color: grey;
+  position: absolute;
+  top: 15%;
+  left: 25%;
+}
+
+#legs {
+  height: 65px;
+  width: 25px;
+  background-color: red;
+  position: relative;
+  top: 70%;
+}
